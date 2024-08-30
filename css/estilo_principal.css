@@ -1,4 +1,18 @@
 
+
+1 de 4.874
+de lunes a domingo
+Recibidos
+
+SEBASTIAN RIVERA GAVIRIA
+Adjuntos
+17:15 (hace 24 minutos)
+para mí
+
+hola mi estimado estudiante de la javeriana
+ 8 archivos adjuntos
+•  Analizado por Gmail
+¡Con mucho gusto!Gracias por escribir.Buenas noches.
 /*Estilos globales*/
 *::after,
 *::before,
@@ -171,15 +185,24 @@ li a.active, a:hover {
 }
 
 .primer-slide{
-    background-color: rgb(0, 123, 82);
+    background-image: url('imagenes_referencia/portada.png');
+    background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
 }
 
 .segundo-slide{
-    background-color: brown;
+    background-image: url('imagenes_referencia/portada2.png');
+    background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
 }
 
 .tercer-slide{
-    background-color: green;
+    background-image: url('imagenes_referencia/portada3.png');
+    background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
 }
 
 .slider input:nth-child(1):checked ~ .content-slider{

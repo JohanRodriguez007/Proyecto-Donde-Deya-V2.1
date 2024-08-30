@@ -1,3 +1,9 @@
+@font-face {
+    font-family: "Deya";
+    src: url("./QwitcherGrypen-Regular.ttf") format("woff2");
+    font-display: swap;
+}
+
 main {
     display: flex;
     justify-content: center;
@@ -33,6 +39,7 @@ header img {
 }
 
 header h1 {
+    font-family: "Deya";
     font-size: 8rem;
     color: white;
     padding: 26px 150px;
@@ -40,7 +47,7 @@ header h1 {
 }
 
 nav {
-    background-color: #0047AB;
+    background-color: #717d7e;
     height: 80px;
     width: 100%;
     position: sticky;
@@ -70,7 +77,7 @@ nav ul li a {
 }
 
 li a.active, a:hover {
-    background-color: #ff782a;
+    background-color: #34495e;
     transition: .5s;
 }
 
@@ -89,9 +96,10 @@ li a.active, a:hover {
 }
 
 .personal-info {
+    font-family: "Deya";
     background-color: #272727;
     padding: 1.5%;
-    font-size: 20px;
+    font-size: 30px;
     color: #ffffffd3;
     display: flex;
     flex-direction: column;
