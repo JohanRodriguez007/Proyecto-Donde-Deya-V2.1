@@ -10,7 +10,7 @@ $stmt = $conn->prepare($sql);
 $stmt->execute();
 $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
-
+<a href="index.php?vista=login" class="btn btn-primary position-fixed top-0 end-0 m-3">Iniciar Sesión</a>
 <main>
     <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">

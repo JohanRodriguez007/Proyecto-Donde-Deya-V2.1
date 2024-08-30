@@ -10,6 +10,5 @@
         <li><a href="index.php?vista=whiskey">Whiskey</a></li>
         <li><a href="index.php?vista=aguardiente">Aguardiente</a></li>
         <li><a href="index.php?vista=mecato">Mecato</a></li>
-        <li><a href="index.php?vista=login">Iniciar Sesión</a></li>
     </ul>
 </nav>

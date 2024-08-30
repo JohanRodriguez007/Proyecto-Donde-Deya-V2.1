@@ -29,7 +29,7 @@
         echo '
             <div class="notification is-danger is-light">
                 <strong>¡Ocurrio un error inesperado!</strong><br>
-                El CODIGO de BARRAS no coincide con el formato solicitado
+                La REFERENCIA no coincide con el formato solicitado
             </div>
         ';
         exit();
@@ -73,7 +73,7 @@
         echo '
             <div class="notification is-danger is-light">
                 <strong>¡Ocurrio un error inesperado!</strong><br>
-                El CODIGO de BARRAS ingresado ya se encuentra registrado, por favor elija otro
+                La REFERENCIA ingresadA ya se encuentra registradA, por favor elija otra
             </div>
         ';
         exit();
