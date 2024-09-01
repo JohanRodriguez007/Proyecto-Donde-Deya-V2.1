@@ -13,7 +13,7 @@ if (!isset($_SESSION['id']) || !isset($_SESSION['usuario'])) {
     <h1 class="title">Home</h1>
     <h2 class="subtitle">¡Bienvenido <?php echo htmlspecialchars($_SESSION['nombre']." ".$_SESSION['apellido']); ?>!</h2>
     <figure class="image is-fluid">
-        <img src="./imagenes_referencia/tienda.jpg" style="max-width: 580px; max-height: 960px; object-fit: cover; margin: 20px;">
+        <img src="./css/imagenes_referencia/tienda.jpg" style="max-width: 580px; max-height: 960px; object-fit: cover; margin: 20px;">
     </figure>
   </main>
 </div>

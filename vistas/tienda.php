@@ -1,8 +1,10 @@
 
 <body>
 
-    <a href="index.php?vista=login" class="btn btn-primary position-fixed top-0 end-0 m-3">Iniciar Sesión</a>
-
+<div class="d-flex justify-content-end position-fixed top-0 end-0 m-3">
+    <a href="index.php?vista=login" class="btn btn-primary me-2">Iniciar Sesión</a>
+    <a href="index.php?vista=customer_new" class="btn btn-primary">Registrarse</a>
+</div>
 
         <div class="container-icon">
             <div class="title">Sobre Nosotros...</div>
@@ -33,36 +35,14 @@
     
             </div>
     
-        
-    
-   
+            <?php
 
-    
-    
+            require './inc/footer.php'; 
 
-
-
-
-
-      <footer class="personal-info">
-       
-        <div class="container-info">
-
-            <div class="info">
-
-                <p>Direccion: Calle 127 abis No 90b-30</p>
-                <p>Contacto: 311 391 1473</p>
-                <p>Correo: linita5marcelita@gmail.com</p>
-                <p>&copy;2024 Cigarrería Donde Deya, Derechos Reservados</p>
-
-
-            </div>
-        </div>
-
-        
-    </footer>
+            ?>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
   
 </body>
 </html>
+
