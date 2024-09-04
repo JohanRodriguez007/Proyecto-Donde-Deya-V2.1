@@ -4,27 +4,47 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: "Main";
+    src: url("./JosefinSans-VariableFont_wght.ttf") format("woff2");
+    font-display: swap;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%; /* Añadir ancho completo */
+}
+
 main {
+    font-family: "Main";
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Hace que el main ocupe toda la altura de la ventana */
-    padding: 30px 0;
-    margin: 24px auto;
+    min-height: 100vh;
+    width: 100%; /* Añadir ancho completo */
+    padding: 0; /* Eliminar padding que puede causar espacios no deseados */
+    margin: 0 auto;
+    background-color: #979A9A;
 }
 
 main > .container {
-    max-width: 1200px; /* Ajusta el ancho máximo según tus necesidades */
+    max-width: 1200px; /* Mantener el ancho máximo en pantallas grandes */
+    width: 100%; /* Asegurar que ocupe todo el ancho en pantallas pequeñas */
     margin: 0 auto;
 }
 
-
+/* Medias queries para pantallas más pequeñas */
+@media screen and (max-width: 1200px) {
+    main > .container {
+        max-width: 100%; /* Asegura que ocupe todo el ancho en pantallas más pequeñas */
+    }
+}
 
 img, svg {
     vertical-align: middle;
     height: 350px;
-    
-
 }
 
 .card img {
@@ -59,6 +79,7 @@ header h1 {
 }
 
 nav {
+    font-family: "Main";
     background-color: #717d7e;
     height: 80px;
     width: 100%;
@@ -108,7 +129,7 @@ li a.active, a:hover {
 }
 
 .personal-info {
-    font-family: "Deya";
+    font-family: "Main";
     background-color: #272727;
     padding: 1.5%;
     font-size: 30px;
@@ -207,8 +228,6 @@ li a.active, a:hover {
         position: absolute;
     }
 }
-
-
 
 
    

@@ -1,3 +1,14 @@
+@font-face {
+    font-family: "Deya";
+    src: url("./QwitcherGrypen-Regular.ttf") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Main";
+    src: url("./JosefinSans-VariableFont_wght.ttf") format("woff2");
+    font-display: swap;
+}
 
 /*Estilos globales*/
 *::after,
@@ -9,15 +20,12 @@
 }
 
 body {
-    font-family: 'Lato';
+    font-family: "Main";
     margin: 0 auto;
     padding: 0;
     background-color: #DDE6ED;
     color: #333;
 }
-
-
-
 
 img{
     max-width: 100%;
@@ -31,6 +39,7 @@ header{
     width: 100%;
     top: 0;
     z-index: 1000;
+    
 }
 
 header img {
@@ -44,6 +53,7 @@ header h1 {
     color: white;
     padding: 0px 317px;;
     text-align: center;
+    font-family: "Deya";
 }
 
 /*estilos footer*/
@@ -51,7 +61,8 @@ header h1 {
 .personal-info {
     background-color: #272727;
     padding: 1.5%;
-    font-size: 20px;
+    font-family: "Main";
+    font-size: 40px;
     color: #ffffffd3;
     display: flex;
     flex-direction: column;
@@ -71,29 +82,29 @@ header h1 {
     text-transform: uppercase;
 }
 
-.link:hover{  /*colres del hover de los botnes de la barra de navegación */
-    background-color: #ff782a;
+.link:hover{
+    background-color: #34495e;
     transition: .5s;
 }
 
-.navbarBasicExample, .navbar-menu { /*colres barra de navegación*/
-    background: #424949;
+.navbarBasicExample, .navbar-menu {
+    background: #717d7e;
 }
 
-.button.is-rounded.custom-color { /*colores del botón "salir"*/
+.button.is-rounded.custom-color {
     background-color: #ff2020; 
     color: #fff; 
     border: none; 
 }
 
 .button.is-primary.is-rounded.custom {
-    background-color: #069214;  /*colores del botón "mi cuenta*/
+    background-color: #069214; 
     color: #fff; 
     border: none; 
 }
 
-.navbar-dropdown a.navbar-item:not(.is-active):not(.is-selected):hover { /*colres de las opciones de los botones de la barra de nav*/
-    background-color: orange;
+.navbar-dropdown a.navbar-item:not(.is-active):not(.is-selected):hover {
+    background-color: #34495e;
   }
 
 
@@ -123,7 +134,7 @@ header h1 {
 
 /* Estilo para el formulario */
 .box_login {
-    background: #ffffff;
+    background: #839192;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -148,7 +159,7 @@ header h1 {
 /* Estilo para las etiquetas de los campos */
 .label {
     font-size: 1em;
-    color: #666;
+    color: black;
     margin-bottom: 5px;
 }
 
@@ -172,7 +183,7 @@ header h1 {
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #aab7b8;
     border: none;
     border-radius: 4px;
     color: #fff;
@@ -234,7 +245,7 @@ header h1 {
     }
 
     .navbar {
-        background-color: #0047AB !important;
+        background-color: #717d7e !important;
       }
       .navbar-burger span {
         color: white;
@@ -250,7 +261,7 @@ header h1 {
     }
 
     .navbar {
-        background-color: #0047AB !important;
+        background-color: #717d7e !important;
       }
       .navbar-burger span {
         color: white;
@@ -268,7 +279,7 @@ header h1 {
     }
 
     .navbar {
-        background-color: #0047AB !important;
+        background-color: #717d7e !important;
       }
       .navbar-burger span {
         color: white;
@@ -284,7 +295,7 @@ header h1 {
         text-align: center;
     }
     .navbar {
-        background-color: #0047AB !important;
+        background-color: #717d7e !important;
       }
       .navbar-burger span {
         color: white;
