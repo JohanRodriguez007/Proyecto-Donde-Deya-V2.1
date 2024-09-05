@@ -1,38 +1,6 @@
-
 <body>
-
-
         <div class="container-icon">
-            <div class="title">Sobre Nosotros...</div>
-    
-            <div class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                  </svg>
-             
-                  <div class="count-products">
-                    <span id="contador-productos">0</span>
-                  </div>
-                  <div class="container-cart-products hidden-cart">
-                    <div class="cart-product">
-                        <div class="info-cart-product">
-                            <span class="cantidad-producto-carrito">1</span>
-                            <p class="titulo-producto-carrito">Cerveza Poker X 30</p>
-                            <span class="precio-producto-carrito">$60.000</span>
-                        </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-close">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                          </svg>
-                          
-                    </div>
-                    <div class="cart-total">
-                        <h3>Total</h3>
-                        <span class="total-pagar">$120.000</span>
-                    </div>
-                  </div>
-    
-            </div>
-                              
+            <div class="title">Sobre Nosotros...</div>                      
         </div>
  
         <div class="container-slider">
@@ -61,28 +29,28 @@
         <h1>Nuestros Productos</h1>
         <div class="product-list">
             <div class="product-item">
-                <img src="imagenes_referencia/Referencia1.jpg" alt="Cerveza" class="product-image">
+                <img src="./css/imagenes_referencia/Referencia1.jpg" alt="Cerveza" class="product-image">
                 <div class="product-details">
                     <p class="product-name">Cerveza</p>
                     <p class="product-description">Cerveza Nacional</p>
                 </div>
             </div>
             <div class="product-item">
-                <img src="imagenes_referencia/Referencia-Whisky4.png" alt="Whiskey" class="product-image">
+                <img src="./css/imagenes_referencia/Referencia-Whisky4.png" alt="Whiskey" class="product-image">
                 <div class="product-details">
                     <p class="product-name">Whiskey</p>
                     <p class="product-description">Whiskey de alta calidad</p>
                 </div>
             </div>
             <div class="product-item">
-                <img src="imagenes_referencia/Referencia-Vino1.png" alt="Vino" class="product-image">
+                <img src="./css/imagenes_referencia/Referencia-Vino1.png" alt="Vino" class="product-image">
                 <div class="product-details">
                     <p class="product-name">Vino</p>
                     <p class="product-description">Vino Selecto</p>
                 </div>
             </div>
             <div class="product-item">
-                <img src="imagenes_referencia/Referencia-aguardiente6.png" alt="Aguardiente" class="product-image">
+                <img src="./css/imagenes_referencia/Referencia-aguardiente6.png" alt="Aguardiente" class="product-image">
                 <div class="product-details">
                     <p class="product-name">Aguardiente</p>
                     <p class="product-description">Aguardiente tradicional</p>
@@ -121,14 +89,6 @@
     </div>
 </div>
     
-   
-
-    
-    
-
-
-
-
 
       <footer class="personal-info">
        
