@@ -12,8 +12,11 @@ if (isset($_SESSION['ultimo_acceso'])) {
         // Si ha excedido el tiempo de inactividad, cerrar la sesión
         session_unset();
         session_destroy();
-        header("Location: index.php?vista=tienda&timeout=1");
-        exit();
+        // Redirigir a la vista de tienda en caso de caducidad de sesión
+        if (basename($_SERVER['PHP_SELF']) !== 'index.php' || (isset($_GET['vista']) && $_GET['vista'] !== 'tienda')) {
+            header("Location: index.php?vista=tienda&timeout=1");
+            exit();
+        }
     }
 }
 
@@ -21,13 +24,23 @@ if (isset($_SESSION['ultimo_acceso'])) {
 $_SESSION['ultimo_acceso'] = time();
 
 // Verificar si se intenta acceder a una vista protegida
-$vista_protegida = ['home', 'otra_vista_protegida']; // Agrega aquí más vistas si es necesario
+$vista_protegida = ["tienda", "cerveza", "vinos", "whiskey", "aguardiente", "mecato", "login", "home", "404", 
+"category_list", "category_new", "category_search", "category_update", "logout", 
+"product_category", "product_img", "product_list", "product_new", "product_search", 
+"product_update", "user_list", "user_new", "user_search", "user_update", "customer_new", "activate_customer"];
 
-if (isset($_GET['vista']) && in_array($_GET['vista'], $vista_protegida) && !isset($_SESSION['usuario'])) {
+// Obtener la vista actual desde el parámetro URL
+$vista_actual = isset($_GET['vista']) ? $_GET['vista'] : '';
+
+// Verificar si se intenta acceder a una vista protegida y la vista actual no es la página de redirección
+if (in_array($vista_actual, $vista_protegida) && !isset($_SESSION['usuario']) && $vista_actual !== 'login' && $vista_actual !== 'tienda') {
     header("Location: index.php?vista=tienda&timeout=1");
     exit();
 }
 ?>
+
+
+
 
 
 
