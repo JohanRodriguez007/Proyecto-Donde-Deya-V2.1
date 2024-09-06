@@ -24,7 +24,7 @@ if (isset($_SESSION['ultimo_acceso'])) {
 $_SESSION['ultimo_acceso'] = time();
 
 // Verificar si se intenta acceder a una vista protegida
-$vista_protegida = ["tienda", "cerveza", "vinos", "whiskey", "aguardiente", "mecato", "login", "home", "404", 
+$vista_protegida = ["login", "home", "404", 
 "category_list", "category_new", "category_search", "category_update", "logout", 
 "product_category", "product_img", "product_list", "product_new", "product_search", 
 "product_update", "user_list", "user_new", "user_search", "user_update", "customer_new", "activate_customer"];
