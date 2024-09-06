@@ -3,6 +3,7 @@
 session_start();
 
 // Destruir la sesión
+session_unset();
 session_destroy();
 
 // Eliminar cookies de sesión
@@ -19,10 +20,8 @@ header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Cache-Control: post-check=0, pre-check=0", false);
 header("Pragma: no-cache");
 
-// Redirigir al login
-if (headers_sent()) {
-    echo "<script> window.location.href='index.php?vista=tienda'; </script>";
-} else {
-    header("Location: index.php?vista=tienda");
-}
+// Redirigir al inicio de la tienda
+header("Location: index.php?vista=tienda");
+exit();
 ?>
+
