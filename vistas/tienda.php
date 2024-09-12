@@ -1,4 +1,10 @@
 <body>
+
+        <div class="d-flex justify-content-end position-fixed top-0 end-0 m-3">
+            <a href="index.php?vista=login" class="btn btn-primary me-2">Iniciar Sesión</a>
+            <a href="index.php?vista=customer_new" class="btn btn-primary">Registrarse</a>
+        </div>
+
         <div class="container-icon">
             <div class="title">Sobre Nosotros...</div>                      
         </div>

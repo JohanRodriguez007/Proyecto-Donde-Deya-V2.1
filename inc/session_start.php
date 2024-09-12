@@ -8,6 +8,7 @@ $tiempo_inactividad = 900;
 // Verificar si existe la variable de tiempo de última actividad
 if (isset($_SESSION['ultimo_acceso'])) {
     $inactividad = time() - $_SESSION['ultimo_acceso'];
+
     if ($inactividad > $tiempo_inactividad) {
         // Si ha excedido el tiempo de inactividad, cerrar la sesión
         session_unset();
@@ -33,11 +34,14 @@ $vista_protegida = ["login", "home", "404",
 $vista_actual = isset($_GET['vista']) ? $_GET['vista'] : '';
 
 // Verificar si se intenta acceder a una vista protegida y la vista actual no es la página de redirección
-if (in_array($vista_actual, $vista_protegida) && !isset($_SESSION['usuario']) && $vista_actual !== 'login' && $vista_actual !== 'tienda') {
+if (in_array($vista_actual, $vista_protegida) && !isset($_SESSION['id']) && $vista_actual !== 'login' && $vista_actual !== 'tienda') {
     header("Location: index.php?vista=tienda&timeout=1");
     exit();
 }
 ?>
+
+
+
 
 
 
