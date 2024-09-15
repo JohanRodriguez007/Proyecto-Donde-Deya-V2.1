@@ -28,7 +28,7 @@ $_SESSION['ultimo_acceso'] = time();
 $vista_protegida = ["login", "home", "404", 
 "category_list", "category_new", "category_search", "category_update", "logout", 
 "product_category", "product_img", "product_list", "product_new", "product_search", 
-"product_update", "user_list", "user_new", "user_search", "user_update", "customer_new", "activate_customer"];
+"product_update", "user_list", "user_new", "user_search", "user_update"];
 
 // Obtener la vista actual desde el parámetro URL
 $vista_actual = isset($_GET['vista']) ? $_GET['vista'] : '';
