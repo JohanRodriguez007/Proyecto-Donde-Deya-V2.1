@@ -9,7 +9,12 @@ $sql = "SELECT producto_codigo, producto_nombre, producto_precio, producto_stock
 $stmt = $conn->prepare($sql);
 $stmt->execute();
 $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// Obtener el mensaje de error si está presente
+$mensaje_error = isset($_GET['error']) ? htmlspecialchars($_GET['error']) : '';
+$mensaje_exito = isset($_GET['success']) ? htmlspecialchars($_GET['success']) : '';
 ?>
+
 <div class="d-flex justify-content-end position-fixed top-0 end-0 m-3">
     <a href="index.php?vista=login" class="btn btn-primary me-2">Iniciar Sesión</a>
     <a href="index.php?vista=customer_new" class="btn btn-primary">Registrarse</a>
@@ -18,6 +23,11 @@ $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <main>
     <div class="container">
+        <!-- Mostrar el mensaje de error si existe -->
+        <?php if ($mensaje_error): ?>
+            <div class="alert alert-danger"><?php echo $mensaje_error; ?></div>
+        <?php endif; ?>
+
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             <?php
             if (count($resultado) > 0) {
@@ -47,14 +57,14 @@ $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             <div class="btn-group">
                                 <a href="descripción-producto.php?id=<?php echo $producto_id; ?>" class="btn btn-primary">Detalles</a>
                             </div>
-                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex justify-content-between align-items-center">
                             <form method="post" action="php/agregar_carrito.php">
-                                <input type="hidden" name="producto_id" value="<?php echo $row['producto_id']; ?>">
-                                <input type="number" name="cantidad" min="1" max="<?php echo $row['producto_stock']; ?>" value="1" required>
-                                <button type="submit" class="btn btn-success">Agregar</button>
-                            </form>
-                        </div>
-
+                            <input type="hidden" name="vista_actual" value="vinos">
+                            <input type="hidden" name="producto_id" value="<?php echo $row['producto_id']; ?>">
+                            <input type="number" name="cantidad" min="1" max="<?php echo $row['producto_stock']; ?>" value="1" required>
+                            <button type="submit" class="btn btn-success">Agregar</button>
+                        </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -77,6 +87,7 @@ require './inc/footer.php'; // Incluir archivo de pie de página
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
+
 
 
 
